@@ -10,3 +10,17 @@
 - **TODO**: Key concepts, topic #1, and topic #2 pages currently have no body content.
 - **TODO**: No research content is currently present on any of the webpages--just sample text.
 - **TODO**: Table of contents on the home page. How should we implement this? As an actual table? Does the top menu not suffice?
+
+## Commit 230286c
+- Updated font so now "itallic" is in the CSS file
+- Changed name of Topic 1 and Topic 2 pages (will add content)
+- Added a picture to homepage (in SVG format) with credit
+- Added Bio for Nuh Van Orden
+- Some grammer and formatting issues resolved
+- Added table of contents (uses bullet points)
+- Added Key terms (subject to change)
+- Added Refrences
+- **TODO** Add basic content to Topic Pages 
+- **TODO** Expand homepage if needed
+- **TODO** Add link to class site (required by rubric)
+- reccomned to install a HTML validator plugin to ensure proper HTML flow
