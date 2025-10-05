@@ -24,3 +24,11 @@
 - **TODO** Expand homepage if needed
 - **TODO** Add link to class site (required by rubric)
 - reccomned to install a HTML validator plugin to ensure proper HTML flow
+
+## Commit ??
+- The menu now remains fixed to the top of the viewport so it is always visible.
+- Fixed font typo in CSS file.
+- Added default styling for the table and description list.
+- Some fixes to make link appearance more consistent across webpages.
+- The link under the image on the homepage opens in a new tab now, and I changed its appearance slightly.
+- Added hanging indent back to citations on the References page.
