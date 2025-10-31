@@ -193,3 +193,85 @@ dl dd
 {
     font-style: italic;
 }
+h1 {
+text-align: center;
+color: #00337f;
+font-size: 2.2em;
+letter-spacing: 0.5px;
+text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+margin-bottom: 30px;
+}
+form {
+    max-width: 700px;
+    margin: 20px auto;
+    background: white;
+    padding: 25px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+input[type="text"] {
+    width: 80%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+}
+label {
+    display: block;
+    margin: 8px 0;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.btn {
+    background: linear-gradient(135deg, #004aad, #005eff);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #003480, #0040b8);
+    transform: scale(1.02);
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f5f8ff;
+    border: 1px solid #d4e0ff;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.correct {
+    color: #1b8a00;
+    font-weight: 600;
+}
+
+.incorrect {
+    color: #d10000;
+    font-weight: 600;
+}
+
+.score {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.pass {
+    color: #1b8a00;
+    font-weight: bold;
+}
+
+.fail {
+    color: #d10000;
+    font-weight: bold;
+}

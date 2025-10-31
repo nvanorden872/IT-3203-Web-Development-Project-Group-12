@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>IT 3203 Group #12 Web Development Project</title>
+</head>
+<body>
+  <nav class="menu">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./concepts.html">Key Concepts</a></li>
+      <li><a href="./topic1.html">What Is SEO?</a></li>
+      <li><a href="./topic2.html">History and Uses of SEO</a></li>
+      <li><a href="./about.html">About Us</a></li>
+      <li><a href="./references.html">References</a></li>
+      <li><a class="active" href="#">Self-Assessment Quiz</a></li>
+    </ul>
+  </nav>
+    <div class="main">
+  <header>
+    <h1>Self-Assessment Quiz: JavaScript Basics</h1>
+  </header>
+
+  <form id="quizForm" onsubmit="submitQuiz(event)">
+    <!-- Fill-in-the-blank -->
+    <fieldset>
+      <legend>1. Fill in the blank</legend>
+      <label>SEO stands for Search ________ Optimization.</label>
+      <input type="text" id="q1" placeholder="Your answer here">
+    </fieldset>
+
+    <!-- Multiple choice -->
+    <fieldset>
+      <legend>2. Which of the following best describes “on-page SEO”?</legend>
+      <label><input type="radio" name="q2" value="a"> Building backlinks from other websites</label>
+      <label><input type="radio" name="q2" value="b"> Optimizing the content and HTML on your own website</label>
+      <label><input type="radio" name="q2" value="c"> Running paid search ads</label>
+      <label><input type="radio" name="q2" value="d"> Submitting your site to search engines</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>3. What is a meta description?</legend>
+      <label><input type="radio" name="q3" value="a"> The title of a web page</label>
+      <label><input type="radio" name="q3" value="b"> A short summary that appears in search results</label>
+      <label><input type="radio" name="q3" value="c"> A list of keywords used for ranking</label>
+      <label><input type="radio" name="q3" value="d"> The site’s sitemap</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>4. Which factor most affects page ranking in search engines?</legend>
+      <label><input type="radio" name="q4" value="a"> The number of images on the page</label>
+      <label><input type="radio" name="q4" value="b"> The quality and relevance of content</label>
+      <label><input type="radio" name="q4" value="c"> The number of ads on the page</label>
+      <label><input type="radio" name="q4" value="d"> The background color of the page</label>
+    </fieldset>
+
+    <!-- Multi-selection -->
+    <fieldset>
+      <legend>5. Which of the following are examples of off-page SEO techniques? (Select all that apply)</legend>
+      <label><input type="checkbox" name="q5[]" value="a"> Link building</label>
+      <label><input type="checkbox" name="q5[]" value="b"> Social media promotion</label>
+      <label><input type="checkbox" name="q5[]" value="c"> Writing meta tags</label>
+      <label><input type="checkbox" name="q5[]" value="d"> Guest blogging</label>
+      <label><input type="checkbox" name="q5[]" value="e"> Improving page load speed</label>
+    </fieldset>
+
+    <button type="submit" class="btn">Submit Quiz</button>
+    <button type="reset" class="btn" onclick="resetQuiz()">Reset</button>
+
+    <div id="results" class="result"></div>
+  </form>
+
+  <script>
+    function submitQuiz(event) {
+      event.preventDefault();
+      let score = 0;
+      let output = "";
+
+      const answers = {
+        q1: "engine",
+        q2: "b",
+        q3: "b",
+        q4: "b",
+        q5: ["a", "b", "d"]
+      };
+
+      const q1 = document.getElementById("q1").value.trim().toLowerCase();
+      if (q1 === answers.q1) {
+        score++; output += `<p>Q1: <span class="correct">Correct!</span></p>`;
+      } else {
+        output += `<p>Q1: <span class="incorrect">Incorrect.</span> Correct answer: <b>${answers.q1}</b></p>`;
+      }
+
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      if (q2 && q2.value === answers.q2) {
+        score++; output += `<p>Q2: <span class="correct">Correct!</span></p>`;
+      } else {
+        output += `<p>Q2: <span class="incorrect">Incorrect.</span> Correct answer: <b>Optimizing the content and HTML on your own website</b></p>`;
+      }
+
+      const q3 = document.querySelector('input[name="q3"]:checked');
+      if (q3 && q3.value === answers.q3) {
+        score++; output += `<p>Q3: <span class="correct">Correct!</span></p>`;
+      } else {
+        output += `<p>Q3: <span class="incorrect">Incorrect.</span> Correct answer: <b>A short summary that appears in search results</b></p>`;
+      }
+
+      const q4 = document.querySelector('input[name="q4"]:checked');
+      if (q4 && q4.value === answers.q4) {
+        score++; output += `<p>Q4: <span class="correct">Correct!</span></p>`;
+      } else {
+        output += `<p>Q4: <span class="incorrect">Incorrect.</span> Correct answer: <b>The quality and relevance of content</b></p>`;
+      }
+
+      const q5Checked = Array.from(document.querySelectorAll('input[name="q5[]"]:checked')).map(cb => cb.value);
+      const isEqual = q5Checked.length === answers.q5.length && q5Checked.every(v => answers.q5.includes(v));
+      if (isEqual) {
+        score++; output += `<p>Q5: <span class="correct">Correct!</span></p>`;
+      } else {
+        output += `<p>Q5: <span class="incorrect">Incorrect.</span> Correct answers: <b>Link building, Social media promotion, Guest blogging</b></p>`;
+      }
+
+      const total = 5;
+      const percentage = (score / total) * 100;
+      const passFail = percentage >= 60 ? `<span class="pass">Pass</span>` : `<span class="fail">Fail</span>`;
+
+      output = `<div class="score">Score: ${score}/${total} (${percentage.toFixed(0)}%) — ${passFail}</div>` + output;
+      document.getElementById("results").innerHTML = output;
+    }
+
+    function resetQuiz() {
+      document.getElementById("results").innerHTML = "";
+    }
+  </script>
+
+  <script src="scripts.js"></script>
+    </div>
+</body>
+</html>
