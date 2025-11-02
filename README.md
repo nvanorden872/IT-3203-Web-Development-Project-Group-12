@@ -1,17 +1,25 @@
 # IT-3203-Web-Development-Project-Group-12
 
-## Initial commit.
-- Created a `dev` branch which is where changes can be pushed until everyone approves.
-- Created basic skeletons for each required webpage: Home, Concepts, Topic #1, Topic #2, About, and References.
-- Each webpage has a standardized appearance for the top menu and footer. The footer has our names and links to the bios on the About page.
-- Home page includes an example of an image panel layout I made a CSS template for. I consider this page *nearly* complete apart from needing real text and images.
-- About page includes an example of a different panel layout I made a CSS template for. I consider this page complete apart from needing real text and images.
-- Created a CSS template for hanging indent to comply with APA style on the References page. I also consider this page complete apart from needing real citations.
-- **TODO**: Key concepts, topic #1, and topic #2 pages currently have no body content.
-- **TODO**: No research content is currently present on any of the webpages--just sample text.
-- **TODO**: Table of contents on the home page. How should we implement this? As an actual table? Does the top menu not suffice?
+## CHANGELOG
 
-## Commit 230286c
+### Commit \<insert-SHA-here\>
+- Added maximum width for main page content.
+- Improved layout and added images to concepts.html page.
+- Improved layout, added images, and improved content on topic1.html pages.
+- **TODO**: Improve layout, add images, and improve content on topic2.html page.
+
+### Commit 372c39d
+- Quiz added.
+
+### Commit 540a16f
+- The menu now remains fixed to the top of the viewport so it is always visible.
+- Fixed font typo in CSS file.
+- Added default styling for the table and description list.
+- Some fixes to make link appearance more consistent across webpages.
+- The link under the image on the homepage opens in a new tab now, and I changed its appearance slightly.
+- Added hanging indent back to citations on the References page.
+
+### Commit 230286c
 - Updated font so now "itallic" is in the CSS file
 - Changed name of Topic 1 and Topic 2 pages (will add content)
 - Added a picture to homepage (in SVG format) with credit
@@ -25,10 +33,13 @@
 - **TODO** Add link to class site (required by rubric)
 - reccomned to install a HTML validator plugin to ensure proper HTML flow
 
-## Commit ??
-- The menu now remains fixed to the top of the viewport so it is always visible.
-- Fixed font typo in CSS file.
-- Added default styling for the table and description list.
-- Some fixes to make link appearance more consistent across webpages.
-- The link under the image on the homepage opens in a new tab now, and I changed its appearance slightly.
-- Added hanging indent back to citations on the References page.
+### Initial commit.
+- Created a `dev` branch which is where changes can be pushed until everyone approves.
+- Created basic skeletons for each required webpage: Home, Concepts, Topic #1, Topic #2, About, and References.
+- Each webpage has a standardized appearance for the top menu and footer. The footer has our names and links to the bios on the About page.
+- Home page includes an example of an image panel layout I made a CSS template for. I consider this page *nearly* complete apart from needing real text and images.
+- About page includes an example of a different panel layout I made a CSS template for. I consider this page complete apart from needing real text and images.
+- Created a CSS template for hanging indent to comply with APA style on the References page. I also consider this page complete apart from needing real citations.
+- **TODO**: Key concepts, topic #1, and topic #2 pages currently have no body content.
+- **TODO**: No research content is currently present on any of the webpages--just sample text.
+- **TODO**: Table of contents on the home page. How should we implement this? As an actual table? Does the top menu not suffice?
