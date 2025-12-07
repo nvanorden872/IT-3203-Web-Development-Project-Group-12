@@ -3,6 +3,12 @@
 ## CHANGELOG
 
 ### Commit \<insert-SHA-here\>
+- Menu text wrap/padding fix.
+
+### Commit 38c962c
+- Mobile Menu Button Added and Content Added to Topic 2
+
+### Commit e2a822a
 - Added maximum width for main page content.
 - Improved layout and added images to concepts.html page.
 - Improved layout, added images, and improved content on topic1.html pages.
