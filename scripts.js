@@ -58,3 +58,34 @@ function submitQuiz(event) {
     function resetQuiz() {
     document.getElementById("results").innerHTML = "";
     }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.querySelector(".menu ul");
+
+  if (hamburger && menu) {
+    hamburger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+      console.log("Menu toggled, show class:", menu.classList.contains("show"));
+    });
+
+    // Close menu when a link is clicked
+    const menuLinks = menu.querySelectorAll("a");
+    menuLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        menu.classList.remove("show");
+        console.log("Menu closed via link click");
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest(".menu")) {
+        menu.classList.remove("show");
+      }
+    });
+  } else {
+    console.log("Hamburger or menu not found");
+  }
+});
