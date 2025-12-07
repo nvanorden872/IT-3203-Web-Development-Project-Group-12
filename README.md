@@ -3,6 +3,9 @@
 ## CHANGELOG
 
 ### Commit \<insert-SHA-here\>
+- Added missing footers to `topic2.html` and `quiz.html`.
+
+### Commit ea57053
 - Menu text wrap/padding fix.
 
 ### Commit 38c962c
