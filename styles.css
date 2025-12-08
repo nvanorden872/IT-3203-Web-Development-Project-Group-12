@@ -272,6 +272,32 @@ fieldset legend {
     line-height: 1.6;
 }
 
+/* References page styling */
+.references-list {
+    margin: 20px 0;
+}
+
+.references-list p {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border-left: 4px solid #007777;
+    border-radius: 4px;
+    line-height: 1.8;
+    padding-left: 35px;
+    text-indent: -20px;
+}
+
+.references-list a {
+    color: #005aa3;
+    word-break: break-all;
+}
+
+.references-list a:hover {
+    color: #003d7a;
+    text-decoration: underline;
+}
+
 .correct { color: #1b8a00; font-weight: 600; }
 .incorrect { color: #d10000; font-weight: 600; }
 .score { font-size: 1.2em; margin-top: 10px; font-weight: 600; }
@@ -360,6 +386,15 @@ fieldset legend {
 
     .content-section h3 {
         font-size: 1.05em;
+    }
+
+    /* References on mobile */
+    .references-list p {
+        margin: 15px 0;
+        padding: 12px 12px 12px 30px;
+        font-size: 0.95em;
+        padding-left: 30px;
+        text-indent: -18px;
     }
 
     /* Forms */
